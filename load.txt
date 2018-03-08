@@ -1,0 +1,5 @@
+.separator "|"
+.import item_uniq.dat Item
+.import bid_uniq.dat Bids
+.import user_uniq.dat User
+.import category_uniq.dat Category

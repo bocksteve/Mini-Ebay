@@ -1,0 +1,33 @@
+Constraints on project #2
+
+1. Userid in User table is set as primary key - create.sql
+
+2. Userid in Bid, and Sellerid in Item, set as foreign keys referencing User table Userid attribute - create.sql
+
+3. Itemid in Item table is set as primary key - create.sql
+
+4. Itemid in Bid table set as foreign key referencing Item table Itemid attribute - create.sql
+
+5. Itemid in Category table set as foreign key referencing Item table Itemid attribute - create.sql
+
+6. Itemid in Category table set as UNIQUE - create.sql
+
+7. CHECK constraint set to insure endtime > strttime in Item table - create.sql
+
+8. Put update trigger in, once you insert into Bids it updates highest bid in Item that has same itemid. - trigger8_add.sql
+
+9. When inserting bid, check if the bidder of the item is the seller of the item in Item that has same itemid. - trigger9_add.sql
+  
+10. bidtime is a primary key of bids - create.sql
+
+11. When inserting bid, check for start and end time of Item with same itemid, then abort if its before start or after end. - trigger11_add.sql
+
+12. When inserting bid, checks to see if there has been another bid for the same amount on the same item, if so abort. - trigger12_add.sql
+
+13. When inserting bid, checks if the number of bids is the actual number of bids. - trigger13_add.sql
+  
+14. When inserting bid, checks to see if bid is lower then any of the other bids on the same item, if so, aborts. - trigger14_add.sql
+  
+15. When inserting bid, checks to see if bidtime is the same as current time, if not abort. - trigger15_add.sql
+
+16. When inserting bid, checks to see if the new time is the newest - trigger16_add.sql
